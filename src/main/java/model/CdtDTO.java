@@ -48,7 +48,10 @@ public class CdtDTO implements Serializable{
 	public double calcularRetencion() {
 		return calcularGananciaBruta()*0.06;
 	}
+	public double calcularGanaciaNeta() {
+		return calcularGananciaBruta()-calcularRetencion();
+	}
 	public double calcularMontoTotal() {
-		return this.valorInversion+(calcularGananciaBruta()-calcularRetencion());
+		return this.valorInversion+calcularGanaciaNeta();
 	}
 }
