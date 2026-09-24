@@ -43,7 +43,7 @@ public class CdtDTO implements Serializable{
 		this.tasaInteresAnual = tasaInteresAnual;
 	}
 	public double calcularGananciaBruta() {
-		return (this.valorInversion*this.tasaInteresAnual*this.dias)/365;
+		return (this.valorInversion*(this.tasaInteresAnual/100)*this.dias)/365;
 	}
 	public double calcularRetencion() {
 		return calcularGananciaBruta()*0.06;
