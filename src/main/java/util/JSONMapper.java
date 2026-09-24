@@ -24,7 +24,11 @@ public class JSONMapper {
 	                StandardOpenOption.TRUNCATE_EXISTING
 	            );
 		} catch (IOException e) {
+<<<<<<< HEAD
 			System.out.println("Error al guardar la nomina: "+e.getMessage());
+=======
+			System.out.println("Error al guardar el CDT: "+e.getMessage());
+>>>>>>> f41fa860338a5a1fd3b115a724e19715dc9824d4
 		}
 		
 	}

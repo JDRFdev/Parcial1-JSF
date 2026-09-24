@@ -1,14 +1,103 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html xmlns="http://www.w3.org/1999/xhtml" 
+<html xmlns="http://www.w3.org/1999/xhtml"
+>>>>>>> f41fa860338a5a1fd3b115a724e19715dc9824d4
       xmlns:h="jakarta.faces.html"
       xmlns:p="http://primefaces.org/ui"
       xmlns:f="jakarta.faces.core">
 <h:head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<<<<<<< HEAD
     <title>Simulador CDT</title>
    
 </h:head>
 <h:body>
     <h1>#{Mybean.mensaje()}</h1>
+    <title>Simulador CDT - Registro</title>
+   
+</h:head>
+<h:body>       
+
+<p:growl id="msgs" showDetail="true" life="5000" />
+        <!-- Información básica -->
+<div class="Registro">
+    <h:form id="formRegistro">
+        <p:panel header="Datos del Usuario">
+            
+            <p:outputLabel for="nombre" value="Nombre:" />
+            <p:inputText id="nombre" value="#{Cdt.cdt.usuario.nombre}" required="true" 
+                         requiredMessage="El nombre es obligatorio" />
+            <br/>
+            
+            <p:outputLabel for="apellidos" value="Apellidos:" />
+            <p:inputText id="apellidos" value="#{Cdt.cdt.usuario.apellidos}" required="true" 
+                         requiredMessage="El apellido es obligatorio" />
+            <br/>
+            
+            <p:outputLabel for="correo" value="Correo electrónico:" />
+            <p:inputText id="correo" value="#{Cdt.cdt.usuario.correo}" required="true" 
+                         requiredMessage="El correo es obligatorio">
+                <f:validateRegex pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" 
+                                 message="Formato de correo inválido" />
+            </p:inputText>
+            <br/>
+            
+            <p:outputLabel for="telefono" value="Teléfono:" />
+            <p:inputText id="telefono" value="#{Cdt.cdt.usuario.telefono}" required="true" 
+                         requiredMessage="El teléfono es obligatorio" />
+            
+        </p:panel> 
+        
+        <br/>
+        
+            <p:panel header="Parámetros del CDT">
+                <p:outputLabel for="dias" value="Número de días (mínimo 30):" />
+                <p:inputNumber id="dias" value="#{Cdt.cdt.dias}" required="true"
+                               requiredMessage="Los días son obligatorios"
+                               minValue="30" 
+                               validatorMessage="El mínimo de días es 30" />
+                <br/>
+                
+                <p:outputLabel for="inversion" value="Valor a invertir (mínimo $2.000.000):" />
+                <p:inputNumber id="inversion" value="#{Cdt.cdt.valorInversion}" required="true"
+                               requiredMessage="El valor de inversión es obligatorio"
+                               minValue="2000000" 
+                               validatorMessage="La inversión mínima es de $2.000.000" />
+                <br/>
+                
+                <p:outputLabel for="tasa" value="Tasa de interés anual (%):" />
+                <p:inputNumber id="tasa" value="#{Cdt.cdt.tasaInteresAnual}" required="true"
+                               requiredMessage="La tasa es obligatoria"
+                               minValue="0.01" 
+                               validatorMessage="La tasa debe ser mayor a 0" />
+            </p:panel>
+            
+            <br/>
+            
+            <div style="text-align: center;">
+		     <p:commandButton value="Registrar y Ver Resultados" 
+                             actionListener="#{Cdt.agregarCDT(Cdt.cdt)}" 
+                             action="registros?faces-redirect=true"
+                             ajax="false"
+                             update="@form" />
+		     
+		     <p:button value="Limpiar" outcome="index" style="margin-left: 10px;" />
+		     
+		     <p:button value="Ir a Registros" outcome="registros" style="margin-left: 10px;" />
+        	</div>
+        	<br/>
+    </h:form> 
+</div>
+
+    
+    <div class="footer" style="text-align: center; border-top: 1px solid #ccc; padding-top: 10px; color: #555;">
+        <p><strong>Autores:</strong></p>
+        <p>Angelo Felipe Salamanca Vargas - Código: 20241578167</p>
+        <p>Juan David Rodriguez Fonseca - Código: 20241578204</p>
+        <p>Asignatura: Programacion por componentes</p>
+    </div>
+    
+>>>>>>> f41fa860338a5a1fd3b115a724e19715dc9824d4
 </h:body>
 </html>
