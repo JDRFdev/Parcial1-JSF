@@ -1,29 +1,16 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
-<html xmlns="http://www.w3.org/1999/xhtml" 
-=======
 <html xmlns="http://www.w3.org/1999/xhtml"
->>>>>>> f41fa860338a5a1fd3b115a724e19715dc9824d4
       xmlns:h="jakarta.faces.html"
       xmlns:p="http://primefaces.org/ui"
       xmlns:f="jakarta.faces.core">
 <h:head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<<<<<<< HEAD
-    <title>Simulador CDT</title>
-   
-</h:head>
-<h:body>
-    <h1>#{Mybean.mensaje()}</h1>
-=======
     <title>Simulador CDT - Resultados</title>
 </h:head>
 <h:body>       
 
-    <!-- CAMBIO: Mensajes globales por si acaso -->
     <p:growl id="msgs" showDetail="true" life="5000" />
 
-    <!-- Información básica -->
     <h1> Resultados de la Simulación CDT</h1>
     
     <div class="Registros">
@@ -31,13 +18,11 @@
             
             <p:panel header="Historial de CDT Registrados">
                 
-                <!-- Tabla con todos los CDT guardados en el JSON -->
                 <p:dataTable var="cdt" value="#{Cdt.obtenerCdts()}" 
                              rows="10" paginator="true"
                              emptyMessage="No hay CDT registrados aún."
                              style="width: 100%;">
                     
-                    <!-- DATOS DEL USUARIO -->
                     <p:column headerText="Nombre">
                         <h:outputText value="#{cdt.usuario.nombre} #{cdt.usuario.apellidos}" />
                     </p:column>
@@ -50,7 +35,6 @@
                         <h:outputText value="#{cdt.usuario.telefono}" />
                     </p:column>
                     
-                    <!-- PARÁMETROS DEL CDT -->
                     <p:column headerText="Días">
                         <h:outputText value="#{cdt.dias}" />
                     </p:column>
@@ -69,7 +53,6 @@
                         <h:outputText value=" %" />
                     </p:column>
                     
-                    <!-- CÁLCULOS -->
                     <p:column headerText="Ganancia Bruta">
                         <h:outputText value="#{cdt.calcularGananciaBruta()}">
                             <f:convertNumber type="currency" currencySymbol="$" 
@@ -104,7 +87,6 @@
             
             <br/>
             <div style="text-align: center;">
-            <!-- Botón para volver al index -->
             <p:button value="Registrar otro CDT" outcome="index" />  
             </div>
         </h:form>
@@ -112,7 +94,6 @@
 
     <br/><br/>
 
-    <!-- Footer con los nombres de los estudiantes -->
     <div class="footer" style="text-align: center; border-top: 1px solid #ccc; padding-top: 10px; color: #555;">
         <p><strong>Autores:</strong></p>
         <p>Angelo Felipe Salamanca Vargas - Código: 20241578167</p>
@@ -120,6 +101,5 @@
         <p>Asignatura: Programacion por componentes</p>
     </div>
     
->>>>>>> f41fa860338a5a1fd3b115a724e19715dc9824d4
 </h:body>
 </html>

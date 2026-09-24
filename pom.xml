@@ -65,7 +65,7 @@
     </dependencies>
 
     <build>
-        <finalName>Nomina_Rodriguez_Salamanca</finalName>
+        <finalName>Parcial_Rodriguez_Juan</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
